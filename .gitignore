@@ -1,0 +1,14 @@
+node_modules/
+dist/
+
+# Test artefacts
+test-results/
+playwright-report/
+allure-results/
+allure-report/
+
+# Secrets
+.env
+
+# macOS
+.DS_Store

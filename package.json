@@ -1,0 +1,30 @@
+{
+  "name": "exploratory-ai-qa",
+  "version": "1.0.0",
+  "description": "Automated QA framework for MOJO Pro using Playwright Test Agents",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed --workers=1",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:ci": "playwright test --workers=1 --retries=2",
+    "allure:run": "playwright test --workers=1 --retries=0",
+    "allure:run:headed": "playwright test --headed --workers=1 --retries=0",
+    "allure:generate": "PATH=\"/usr/local/opt/openjdk@21/bin:$PATH\" allure generate allure-results --clean -o allure-report",
+    "allure:open": "PATH=\"/usr/local/opt/openjdk@21/bin:$PATH\" allure open allure-report",
+    "allure:serve": "PATH=\"/usr/local/opt/openjdk@21/bin:$PATH\" allure serve allure-results",
+    "allure": "npm run allure:run && npm run allure:generate && npm run allure:open",
+    "allure:headed": "npm run allure:run:headed && npm run allure:generate && npm run allure:open",
+    "allure:ci": "npm run test:ci && npm run allure:generate"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "allure-commandline": "^2.38.1",
+    "allure-js-commons": "^3.7.1",
+    "allure-playwright": "^3.7.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "type": "commonjs"
+}
