@@ -1,0 +1,1 @@
+[{"values":["MOJO Pro"],"name":"App"},{"values":["https://mojopro.joveo.com"],"name":"Base_URL"},{"values":["https://accounts.joveo.com/login"],"name":"Auth_URL"},{"values":["Chromium"],"name":"Browser"},{"values":["QA-3303"],"name":"JIRA_Ticket"}]
