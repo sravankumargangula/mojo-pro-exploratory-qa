@@ -1,0 +1,325 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: navigation/header.spec.ts >> Header & Global Controls >> 4.1 All Clients Dropdown Opens
+- Location: tests/navigation/header.spec.ts:8:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('button', { name: /All Clients/i })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByRole('button', { name: /All Clients/i })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - img [ref=e6] [cursor=pointer]
+    - generic [ref=e8]:
+      - generic [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: Account
+        - generic [ref=e12]: Joveo-Test - $ USD
+      - generic [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]: All Clients
+        - img [ref=e16]: arrow_drop_down
+    - generic [ref=e17]:
+      - generic [ref=e21] [cursor=pointer]:
+        - img [ref=e22]:
+          - img [ref=e23]
+        - text: All Regions
+        - generic [ref=e25]: USD (P)
+        - img [ref=e26]: arrow_drop_down
+      - button [ref=e28] [cursor=pointer]:
+        - img [ref=e29]: build
+      - button [ref=e34] [cursor=pointer]:
+        - img [ref=e35]: notifications
+      - generic [ref=e39] [cursor=pointer]: JT
+  - generic [ref=e40]:
+    - generic [ref=e45]:
+      - img [ref=e49] [cursor=pointer]:
+        - img [ref=e50]
+      - img [ref=e59] [cursor=pointer]:
+        - img [ref=e60]
+      - img [ref=e65] [cursor=pointer]:
+        - img [ref=e66]
+    - generic [ref=e77]:
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: Overview
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: Account
+              - img [ref=e85]: keyboard_arrow_right
+            - generic [ref=e87]: Joveo-Test - $ USD
+        - button "Add Client" [ref=e89]:
+          - img [ref=e90]: add
+          - generic [ref=e91]: Add Client
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e97]:
+            - button:
+              - img: filter_alt
+            - generic [ref=e100] [cursor=pointer]: Add Filter
+          - generic [ref=e101]:
+            - button "Overall" [ref=e103] [cursor=pointer]:
+              - generic [ref=e105]:
+                - img [ref=e106]: bar_chart
+                - generic [ref=e107]: Overall
+              - img [ref=e108]: arrow_drop_down
+            - button "This Month" [ref=e113] [cursor=pointer]:
+              - generic [ref=e115]:
+                - img [ref=e116]: date_range
+                - generic [ref=e117]: This Month
+              - img [ref=e118]: arrow_drop_down
+        - generic [ref=e123]:
+          - generic [ref=e125]:
+            - generic [ref=e128]:
+              - generic [ref=e130] [cursor=pointer]:
+                - img [ref=e131]
+                - generic [ref=e132]: Spend
+                - img [ref=e133]: arrow_drop_down
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - generic [ref=e136]: $228
+                  - generic [ref=e137]:
+                    - img [ref=e138]: arrow_drop_down
+                    - generic [ref=e139]: Underpacing by 0.00%
+                - img [ref=e143]
+            - generic [ref=e160]:
+              - generic [ref=e162] [cursor=pointer]:
+                - img [ref=e163]
+                - generic [ref=e164]: Sp. Clicks
+                - img [ref=e165]: arrow_drop_down
+              - generic [ref=e166]:
+                - generic [ref=e167]:
+                  - generic [ref=e168]: "61"
+                  - generic [ref=e169]:
+                    - img [ref=e170]: arrow_drop_up
+                    - generic [ref=e171]: 165.22% from previous month
+                - img [ref=e175]
+            - generic [ref=e188]:
+              - generic [ref=e190] [cursor=pointer]:
+                - img [ref=e191]
+                - generic [ref=e192]: Sp. Applies
+                - img [ref=e193]: arrow_drop_down
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - generic [ref=e196]: "8"
+                  - generic [ref=e197]:
+                    - img [ref=e198]: arrow_drop_down
+                    - generic [ref=e199]: 20% from previous month
+                - img [ref=e203]
+            - generic [ref=e216]:
+              - generic [ref=e218] [cursor=pointer]:
+                - img [ref=e219]
+                - generic [ref=e220]: CPC
+                - img [ref=e221]: arrow_drop_down
+              - generic [ref=e222]:
+                - generic [ref=e223]:
+                  - generic [ref=e224]: $3.74
+                  - generic [ref=e225]:
+                    - img [ref=e226]: arrow_drop_down
+                    - generic [ref=e227]: 64.31% from previous month
+                - img [ref=e231]
+            - generic [ref=e244]:
+              - generic [ref=e246] [cursor=pointer]:
+                - img [ref=e247]
+                - generic [ref=e248]: CPA
+                - img [ref=e249]: arrow_drop_down
+              - generic [ref=e250]:
+                - generic [ref=e251]:
+                  - generic [ref=e252]: $28.52
+                  - generic [ref=e253]:
+                    - img [ref=e254]: arrow_drop_up
+                    - generic [ref=e255]: 18.34% from previous month
+                - img [ref=e259]
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e273]: Compare performance of
+              - button "Spend vs CPA" [ref=e275] [cursor=pointer]:
+                - img [ref=e276]: arrow_drop_down
+                - generic [ref=e278]:
+                  - generic [ref=e281]: Spend
+                  - generic [ref=e282]: vs
+                  - generic [ref=e285]: CPA
+            - img [ref=e294]:
+              - generic [ref=e303]: Spend
+              - generic [ref=e305]: CPA
+              - generic [ref=e314]:
+                - generic [ref=e315]: "01"
+                - generic [ref=e316]: "02"
+                - generic [ref=e317]: "03"
+                - generic [ref=e318]: "04"
+                - generic [ref=e319]: "05"
+              - generic [ref=e320]:
+                - generic [ref=e321]: $0
+                - generic [ref=e322]: $60
+                - generic [ref=e323]: $120
+                - generic [ref=e324]: $180
+              - generic [ref=e325]:
+                - generic [ref=e326]: $0
+                - generic [ref=e327]: $20
+                - generic [ref=e328]: $40
+                - generic [ref=e329]: $60
+          - generic [ref=e331]:
+            - generic [ref=e332]:
+              - generic [ref=e333]:
+                - generic [ref=e334]: Hiring funnel
+                - img [ref=e335] [cursor=pointer]: settings
+              - generic [ref=e339]:
+                - generic [ref=e340]:
+                  - generic [ref=e341]:
+                    - generic [ref=e342]: Clicks
+                    - generic [ref=e343]: "61"
+                  - generic [ref=e344]:
+                    - generic [ref=e345]: Apply Starts
+                    - generic [ref=e346]: "17"
+                    - generic [ref=e347]: 72.13% Drop
+                  - generic [ref=e348]:
+                    - generic [ref=e349]: Apply Finish
+                    - generic [ref=e350]: "8"
+                    - generic [ref=e351]: 52.94% Drop
+                  - generic [ref=e352]:
+                    - generic [ref=e353]: Hires
+                    - generic [ref=e354]: "0"
+                    - generic [ref=e355]: 100% Drop
+                - img [ref=e359]
+            - generic [ref=e382]:
+              - generic [ref=e383]: Spend analysis
+              - generic [ref=e386]:
+                - generic [ref=e387]:
+                  - generic [ref=e388]:
+                    - img "Spend" [ref=e389]
+                    - generic [ref=e390]: Spend
+                  - generic [ref=e391]:
+                    - img "Proj. spend" [ref=e392]
+                    - generic [ref=e393]: Proj. spend
+                  - generic [ref=e394]:
+                    - img "Prev. month spend" [ref=e395]
+                    - generic [ref=e396]: Prev. month spend
+                - img [ref=e400]:
+                  - generic [ref=e419]:
+                    - generic [ref=e420]: "02"
+                    - generic [ref=e421]: "04"
+                    - generic [ref=e422]: "06"
+                    - generic [ref=e423]: "08"
+                    - generic [ref=e424]: "10"
+                    - generic [ref=e425]: "12"
+                    - generic [ref=e426]: "14"
+                    - generic [ref=e427]: "16"
+                    - generic [ref=e428]: "18"
+                    - generic [ref=e429]: "20"
+                    - generic [ref=e430]: "22"
+                    - generic [ref=e431]: "24"
+                    - generic [ref=e432]: "26"
+                    - generic [ref=e433]: "28"
+                    - generic [ref=e434]: "30"
+                  - generic [ref=e435]:
+                    - generic [ref=e436]: $0
+                    - generic [ref=e437]: $1K
+                    - generic [ref=e438]: $2K
+                    - generic [ref=e439]: $3K
+          - generic [ref=e441]:
+            - heading "Publisher statistics" [level=2] [ref=e442]
+            - generic [ref=e443]:
+              - generic [ref=e444]:
+                - generic [ref=e445]: Publishers comparison on
+                - button "Spend" [ref=e447] [cursor=pointer]:
+                  - img [ref=e448]: arrow_drop_down
+                  - generic [ref=e449]: Spend
+              - generic [ref=e452]:
+                - generic [ref=e459]:
+                  - img "Spend $228.18" [ref=e460]
+                  - generic [ref=e472]:
+                    - generic [ref=e473]: Spend
+                    - generic [ref=e474]: $228.18
+                - img [ref=e481]:
+                  - generic [ref=e493]:
+                    - generic [ref=e495]:
+                      - generic [ref=e496]: $114.50
+                      - text: $114.50
+                    - generic [ref=e498]:
+                      - generic [ref=e499]: $98.57
+                      - text: $98.57
+                    - generic [ref=e501]:
+                      - generic [ref=e502]: $12.78
+                      - text: $12.78
+                    - generic [ref=e504]:
+                      - generic [ref=e505]: $2.30
+                      - text: $2.30
+                    - generic [ref=e507]:
+                      - generic [ref=e508]: $0.03
+                      - text: $0.03
+                  - generic [ref=e509]:
+                    - generic [ref=e510]: S-BC-CPC
+                    - generic [ref=e511]: Sanity test pub
+                    - generic [ref=e512]: JAX USD
+                    - generic [ref=e513]: Joveo Pixel Test Feed
+                    - generic [ref=e514]: S-BC-SLOTS
+                  - generic [ref=e515]:
+                    - generic [ref=e516]: $0
+                    - generic [ref=e517]: $100
+                    - generic [ref=e518]: $25
+                    - generic [ref=e519]: $50
+                    - generic [ref=e520]: $75
+                    - generic [ref=e521]: $125
+                    - generic [ref=e522]: $150
+              - generic [ref=e524] [cursor=pointer]:
+                - generic [ref=e525]: View Publishers
+                - img [ref=e526]: arrow_forward
+```
+
+# Test source
+
+```ts
+  1  | // spec: specs/mojo-pro-test-plan.md
+  2  | // seed: tests/seed.spec.ts
+  3  | 
+  4  | import { test, expect } from '../../fixtures';
+  5  | 
+  6  | test.describe('Header & Global Controls', () => {
+  7  | 
+  8  |   test('4.1 All Clients Dropdown Opens', async ({ mojoproPage: page }) => {
+  9  |     const allClientsBtn = page.getByRole('button', { name: /All Clients/i });
+> 10 |     await expect(allClientsBtn).toBeVisible();
+     |                                 ^ Error: expect(locator).toBeVisible() failed
+  11 |     await allClientsBtn.click();
+  12 |     await page.waitForTimeout(500);
+  13 | 
+  14 |     await expect(allClientsBtn).toHaveAttribute('aria-expanded', 'true');
+  15 |     await page.keyboard.press('Escape');
+  16 |   });
+  17 | 
+  18 |   test('4.2 Region / Currency Selector Opens', async ({ mojoproPage: page }) => {
+  19 |     const regionBtn = page.getByRole('button', { name: /All Regions/i });
+  20 |     await expect(regionBtn).toBeVisible();
+  21 |     await regionBtn.click();
+  22 |     await page.waitForTimeout(500);
+  23 | 
+  24 |     await expect(regionBtn).toHaveAttribute('aria-expanded', 'true');
+  25 |     await page.keyboard.press('Escape');
+  26 |   });
+  27 | 
+  28 |   test('4.3 Page Title is Mojo', async ({ mojoproPage: page }) => {
+  29 |     await expect(page).toHaveTitle('Mojo');
+  30 |   });
+  31 | 
+  32 | });
+  33 | 
+```
